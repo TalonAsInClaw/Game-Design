@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{75803804-1101-FD3A-955B-A666E7F8397E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="35" Column="6" />
+      <File FileName="Assets/Scripts/BossLaser.cs" />
+      <File FileName="Assets/Scripts/PlayerLaser.cs" />
+      <File FileName="Assets/Scripts/EnemyControl.cs" />
+      <File FileName="Assets/Scripts/EnemySpawner.cs" />
+      <File FileName="Assets/Scripts/EnemyGun.cs" />
+      <File FileName="Assets/Scripts/Destroyer.cs" />
+      <File FileName="Assets/Scripts/EnemyLaser.cs" />
+      <File FileName="Assets/Scripts/Scroll.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Cartoon Galaxy Shooter" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayerController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6d87c41d-43ec-4ba6-b5b8-953637227163" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
