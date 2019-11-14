@@ -2,13 +2,13 @@
 
 A space faring top down shoot-em-up created with Unity and C#.
 
-##### Game Objective
+#### Game Objective
 
 The objective of Cartoon Galaxy Shooter is to score as many points as possible <br>
 by destroying enemy ships. The Player controls a triangle fighter space ship that <br>
 can move left, right, up and down around the playfield.
 
-##### In Game Rules
+#### In Game Rules
 
 - Player can move left with the left arrow.
 - Player can move right with the right arrow.
@@ -19,12 +19,12 @@ can move left, right, up and down around the playfield.
 - If player collides with enemy ship or enemy laser, it is destroyed.
 - Power Ups will have different effects.
 
-##### Win / Lose Conditions
+#### Win / Lose Conditions
 
 If the player is struck by an enemy laser or an enemy ship collides with player, <br>
 the player loses one life. When all lives are spent, the game is over.
 
-##### Current Tasks
+#### Current Tasks
 
 - Update animations and fix any glitches.
 - Add more variety in enemies.
