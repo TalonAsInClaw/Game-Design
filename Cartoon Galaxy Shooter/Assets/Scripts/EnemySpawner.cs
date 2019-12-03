@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject EnemyGO;
+    public GameObject EnemySquareGO;
 
+    float whichEnemy = 0f;
     float maxSpawnRateInSeconds = 3f;
 
     // Start is called before the first frame update
@@ -14,6 +16,8 @@ public class EnemySpawner : MonoBehaviour
         Invoke("SpawnEnemy", maxSpawnRateInSeconds);
 
         InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
+
+        InvokeRepeating("ChangeEnemyType", 15f, 15f);
     }
 
     // Update is called once per frame
@@ -27,10 +31,24 @@ public class EnemySpawner : MonoBehaviour
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
-        anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        switch(whichEnemy)
+        {
+            case 0:
+                {
+                    GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
+                    anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+                    break;
+                }
+            case 1:
+                {
+                    GameObject anEnemy = (GameObject)Instantiate(EnemySquareGO);
+                    anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+                    break;
+                }
+        }
 
         ScheduleNextEnemySpawn();
+
     }
 
     void ScheduleNextEnemySpawn()
@@ -55,5 +73,10 @@ public class EnemySpawner : MonoBehaviour
             maxSpawnRateInSeconds--;
         if (maxSpawnRateInSeconds == 1f)
             CancelInvoke("IncreaseSpawnRate");
+    }
+
+    void ChangeEnemyType()
+    {
+        whichEnemy++;
     }
 }

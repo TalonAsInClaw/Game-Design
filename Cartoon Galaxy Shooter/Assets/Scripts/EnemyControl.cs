@@ -17,14 +17,18 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //get position of enemy
         Vector2 position = transform.position;
 
+        //calculate new position vector
         position = new Vector2(position.x, position.y - speed * Time.deltaTime);
 
+        //move enemy to new position
         transform.position = position;
 
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
 
+        //if beyond camera view, destroy
         if(transform.position.y < min.y)
         {
             Destroy(gameObject);
