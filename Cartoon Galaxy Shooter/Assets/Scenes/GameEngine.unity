@@ -397,6 +397,7 @@ MonoBehaviour:
   EnemyGO: {fileID: 618650668322465190, guid: c03db11929b0e4ce8b9adff419a9dca4, type: 3}
   EnemySquareGO: {fileID: 9101006076625281728, guid: 018c16ff7457648b382e1c6bae311194,
     type: 3}
+  BossGO: {fileID: 4253755184950560683, guid: 23fa6c952eb9745e88f7a997766966d4, type: 3}
 --- !u!4 &2052782922
 Transform:
   m_ObjectHideFlags: 0

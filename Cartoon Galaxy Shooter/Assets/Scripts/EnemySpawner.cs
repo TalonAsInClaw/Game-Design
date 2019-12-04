@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject EnemyGO;
     public GameObject EnemySquareGO;
+    public GameObject BossGO;
 
     float whichEnemy = 0f;
     float maxSpawnRateInSeconds = 3f;
@@ -31,22 +32,33 @@ public class EnemySpawner : MonoBehaviour
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        switch(whichEnemy)
+        
+        if (!GameObject.FindWithTag("Boss"))
         {
-            case 0:
-                {
-                    GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
-                    anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
-                    break;
-                }
-            case 1:
-                {
-                    GameObject anEnemy = (GameObject)Instantiate(EnemySquareGO);
-                    anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
-                    break;
-                }
+            switch (whichEnemy)
+            {
+                case 0:
+                    {
+                        GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
+                        anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+                        break;
+                    }
+                case 1:
+                    {
+                        GameObject anEnemy = (GameObject)Instantiate(EnemySquareGO);
+                        anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+                        break;
+                    }
+                case 2:
+                    {
+                        GameObject anEnemy = (GameObject)Instantiate(BossGO);
+                        anEnemy.transform.position = new Vector2((min.x + max.x / 2), max.y); // spawn in middle
+                        whichEnemy = 0; // reset enemy types for level 2
+                        break;
+                    }
+            }
         }
-
+     
         ScheduleNextEnemySpawn();
 
     }

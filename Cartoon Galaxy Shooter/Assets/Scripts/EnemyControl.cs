@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyControl : MonoBehaviour
 {
     public GameObject ExplosionGO;
-
     float speed;
 
     // Start is called before the first frame update
