@@ -12,7 +12,7 @@ public class BossControl : MonoBehaviour
     void Start()
     {
         speed = 4f;
-        life = 2;
+        life = 3;
     }
 
     // Update is called once per frame

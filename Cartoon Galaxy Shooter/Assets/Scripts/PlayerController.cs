@@ -61,8 +61,8 @@ public class PlayerController : MonoBehaviour
         {
             PlayExplosion();
 
-            //Destroy(gameObject); //destroy player
-            //SceneManager.LoadScene("MainMenu"); // transition back to main menu
+            Destroy(gameObject); //destroy player
+            SceneManager.LoadScene("MainMenu"); // transition back to main menu
             
         }
     }
