@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,12 +10,6 @@ public class PlayerController : MonoBehaviour
     public GameObject ExplosionGO;
 
     public float speed;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -67,6 +62,8 @@ public class PlayerController : MonoBehaviour
             PlayExplosion();
 
             Destroy(gameObject); //destroy player
+            SceneManager.LoadScene("MainMenu"); // transition back to main menu
+            
         }
     }
 
